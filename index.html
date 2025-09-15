@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Adicionado para habilitar o modo escuro via classe no HTML
+        tailwind.config = {
+          darkMode: 'class',
+        }
+      </script>
     <style>
         html {
             scroll-behavior: smooth;
@@ -46,7 +52,7 @@
                 <!-- src corrigido -->
                 <img id="logo-header" src="Logo.png" alt="Logo do Curso" class="h-12 w-auto">
             </div>
-             <!-- Navigation Links -->
+              <!-- Navigation Links -->
             <div class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="#organization" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navOrg">Organização</a>
                 <a href="#objectives" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navObj">Objetivos</a>
@@ -70,8 +76,10 @@
         <section id="hero" class="bg-blue-600 text-white relative">
             <div class="absolute inset-0 bg-black opacity-20"></div>
             <div class="container mx-auto px-6 py-20 md:py-28 text-center relative z-10">
-                <!-- src corrigido -->
-                <img id="logo-hero" src="Logo.png" alt="Logo do Curso" class="h-24 md:h-32 w-auto mx-auto mb-8">
+                <!-- ALTERAÇÃO: Logo maior e centralizado em um container circular -->
+                <div class="w-44 h-44 md:w-52 md:h-52 mx-auto mb-8 bg-white/10 rounded-full shadow-2xl backdrop-blur-sm flex justify-center items-center">
+                    <img id="logo-hero" src="Logo.png" alt="Logo do Curso" class="h-36 md:h-44 w-auto">
+                </div>
                 <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4" data-lang-key="heroTitle">Treinamento Intensivo em PET/CT para Cardiologia e Oncologia</h1>
                 <p class="text-lg md:text-xl mb-2" data-lang-key="heroSubtitle">Projeto de Cooperação Técnica da AIEA: RLA6093 (ARCAL CXCIII)</p>
                 <div class="mt-8 bg-white/20 backdrop-blur-sm inline-flex items-center space-x-4 px-6 py-3 rounded-full">
@@ -81,28 +89,41 @@
             </div>
         </section>
 
+        <!-- Supporters Section -->
+        <section id="supporters" class="py-12 bg-gray-100 dark:bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-8" data-lang-key="supportersTitle">Com o Apoio de</h3>
+                <div class="flex flex-wrap justify-center items-center gap-x-12 sm:gap-x-16 gap-y-8">
+                    <img src="logo-cnen.png" alt="Logo CNEN" class="h-12 md:h-14 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="logo-uff.png" alt="Logo UFF" class="h-12 md:h-14 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="logo-iaea.png" alt="Logo IAEA" class="h-12 md:h-14 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="logo-huap.png" alt="Logo HUAP-UFF" class="h-12 md:h-14 grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+            </div>
+        </section>
+
         <!-- Organizers Section -->
-        <section id="organization" class="py-16 bg-white dark:bg-gray-800">
+        <section id="organization" class="py-16 bg-white dark:bg-gray-700">
             <div class="container mx-auto px-6">
                  <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="orgTitle">Organização e Coordenação</h2>
                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                        <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="coordTitle">Coordenadora</h3>
-                        <p class="mt-2 text-gray-700 dark:text-gray-300">Prof. Christiane Wiefels</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                        <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="collabTitle">Colaboração</h3>
-                        <p class="mt-2 text-gray-700 dark:text-gray-300">Dr. Jessica Cisotto Machado</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">(Doutoranda, UFF)</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                        <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="localOrgTitle">Organização Local</h3>
-                        <p class="mt-2 text-gray-700 dark:text-gray-300">Prof. Claudio Tinoco Mesquita</p>
-                    </div>
-                     <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                        <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="residentTitle">Residente</h3>
-                        <p class="mt-2 text-gray-700 dark:text-gray-300">Emanuela Bandeira</p>
-                    </div>
+                     <div class="bg-gray-50 dark:bg-gray-600 p-6 rounded-lg shadow-sm">
+                         <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="coordTitle">Coordenadora</h3>
+                         <p class="mt-2 text-gray-700 dark:text-gray-300">Prof. Christiane Wiefels</p>
+                     </div>
+                     <div class="bg-gray-50 dark:bg-gray-600 p-6 rounded-lg shadow-sm">
+                         <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="collabTitle">Colaboração</h3>
+                         <p class="mt-2 text-gray-700 dark:text-gray-300">Dr. Jessica Cisotto Machado</p>
+                         <p class="text-sm text-gray-500 dark:text-gray-400">(Doutoranda, UFF)</p>
+                     </div>
+                     <div class="bg-gray-50 dark:bg-gray-600 p-6 rounded-lg shadow-sm">
+                         <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="localOrgTitle">Organização Local</h3>
+                         <p class="mt-2 text-gray-700 dark:text-gray-300">Prof. Claudio Tinoco Mesquita</p>
+                     </div>
+                      <div class="bg-gray-50 dark:bg-gray-600 p-6 rounded-lg shadow-sm">
+                         <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="residentTitle">Residente</h3>
+                         <p class="mt-2 text-gray-700 dark:text-gray-300">Emanuela Bandeira</p>
+                     </div>
                  </div>
             </div>
         </section>
@@ -186,10 +207,10 @@
                             <div>
                                 <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-4" data-lang-key="morning">Manhã – Sessões Teóricas</h3>
                                 <ul class="space-y-3 list-disc list-inside text-gray-700 dark:text-gray-300">
-                                    <li data-lang-key="d1m1">Abertura e boas-vindas – Claudio Tinoco Mesquita (10 min)</li>
-                                    <li data-lang-key="d1m2">Palestra: Princípios de PET/CT em Cardiologia e Oncologia – Christiane Wiefels (45 min)</li>
-                                    <li data-lang-key="d1m3">Palestra: PET/CT na Avaliação Diagnóstica e Prognóstica de Doenças Cardiovasculares e Oncológicas (45 min)</li>
-                                    <li data-lang-key="d1m4">Apresentação de caso: PET-CT Oncológico – Jessica Cisotto (15 min)</li>
+                                    <li data-lang-key="d1m1">Abertura e boas-vindas – Claudio Tinoco Mesquita</li>
+                                    <li data-lang-key="d1m2">Palestra: Princípios de PET/CT em Cardiologia e Oncologia – Christiane Wiefels</li>
+                                    <li data-lang-key="d1m3">Palestra: PET/CT na Avaliação Diagnóstica e Prognóstica de Doenças Cardiovasculares e Oncológicas</li>
+                                    <li data-lang-key="d1m4">Apresentação de caso: PET-CT Oncológico – Jessica Cisotto</li>
                                 </ul>
                             </div>
                             <div>
@@ -210,8 +231,8 @@
                             <div>
                                 <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-4" data-lang-key="morning">Manhã – Sessões Teóricas</h3>
                                 <ul class="space-y-3 list-disc list-inside text-gray-700 dark:text-gray-300">
-                                    <li data-lang-key="d2m1">Palestra: PET/CT em Câncer de Mama e Esôfago – Christiane Wiefels (45 min)</li>
-                                    <li data-lang-key="d2m2">Palestra: Aplicações de MUGA e PET em Cardio-Oncologia – Christiane Wiefels (45 min)</li>
+                                    <li data-lang-key="d2m1">Palestra: PET/CT em Câncer de Mama e Esôfago – Christiane Wiefels</li>
+                                    <li data-lang-key="d2m2">Palestra: Aplicações de MUGA e PET em Cardio-Oncologia – Christiane Wiefels</li>
                                 </ul>
                             </div>
                             <div>
@@ -329,6 +350,7 @@
                 heroTitle: "Treinamento Intensivo em PET/CT para Cardiologia e Oncologia",
                 heroSubtitle: "Projeto de Cooperação Técnica da AIEA: RLA6093 (ARCAL CXCIII)",
                 eventDates: "14 a 17 de Outubro de 2025",
+                supportersTitle: "Com o Apoio de",
                 orgTitle: "Organização e Coordenação",
                 coordTitle: "Coordenadora",
                 collabTitle: "Colaboração",
@@ -351,18 +373,18 @@
                 day3Tab: "Dia 3 - 16/Out",
                 day4Tab: "Dia 4 - 17/Out",
                 venue: "Local: Universidade Federal Fluminense – Departamento de Medicina Nuclear",
-                morning: "Manhã – Sessões Teóricas",
-                afternoon: "Tarde – Sessões Práticas",
-                afternoonPI: "Tarde – Sessões Práticas e Interativas",
-                afternoonPC: "Tarde – Sessões Práticas e Encerramento",
-                d1m1: "Abertura e boas-vindas – Claudio Tinoco Mesquita (10 min)",
-                d1m2: "Palestra: Princípios de PET/CT em Cardiologia e Oncologia – Christiane Wiefels (45 min)",
-                d1m3: "Palestra: PET/CT na Avaliação Diagnóstica e Prognóstica de Doenças Cardiovasculares e Oncológicas (45 min)",
-                d1m4: "Apresentação de caso: PET-CT Oncológico – Jessica Cisotto (15 min)",
+                morning: "Manhã – Sessões Teóricas (10h - 12h)",
+                afternoon: "Tarde – Sessões Práticas (14h - 16h)",
+                afternoonPI: "Tarde – Sessões Práticas e Interativas (14h - 16h)",
+                afternoonPC: "Tarde – Sessões Práticas e Encerramento (14h - 16h)",
+                d1m1: "Abertura e boas-vindas – Claudio Tinoco Mesquita",
+                d1m2: "Palestra: Princípios de PET/CT em Cardiologia e Oncologia – Christiane Wiefels",
+                d1m3: "Palestra: PET/CT na Avaliação Diagnóstica e Prognóstica de Doenças Cardiovasculares e Oncológicas",
+                d1m4: "Apresentação de caso: PET-CT Oncológico – Jessica Cisotto",
                 d1a1: "Sessão prática: Ajuste de protocolos de PET/CT em cardiologia e oncologia",
                 d1a2: "Discussão interativa de casos: Integração do PET/CT na prática clínica de rotina",
-                d2m1: "Palestra: PET/CT em Câncer de Mama e Esôfago – Christiane Wiefels (45 min)",
-                d2m2: "Palestra: Aplicações de MUGA e PET em Cardio-Oncologia – Christiane Wiefels (45 min)",
+                d2m1: "Palestra: PET/CT em Câncer de Mama e Esôfago – Christiane Wiefels",
+                d2m2: "Palestra: Aplicações de MUGA e PET em Cardio-Oncologia – Christiane Wiefels",
                 d2a1: "Revisão de casos: Detecção de cardiotoxicidade em pacientes oncológicos (mama, esôfago, linfoma)",
                 d2a2: "Sessão prática: Padronização de protocolos de PET/CT em oncologia",
                 d3m1: "Palestra: PET/CT em Câncer de Pulmão: Perspectivas Diagnósticas e Prognósticas",
@@ -398,6 +420,7 @@
                 heroTitle: "Intensive Training in PET/CT for Cardiology and Oncology",
                 heroSubtitle: "IAEA Technical Cooperation Project: RLA6093 (ARCAL CXCIII)",
                 eventDates: "October 14–17, 2025",
+                supportersTitle: "With the Support of",
                 orgTitle: "Organization and Coordination",
                 coordTitle: "Coordinator",
                 collabTitle: "Collaboration",
@@ -420,18 +443,18 @@
                 day3Tab: "Day 3 - Oct 16",
                 day4Tab: "Day 4 - Oct 17",
                 venue: "Venue: Universidade Federal Fluminense – Nuclear Medicine Department",
-                morning: "Morning – Theoretical Sessions",
-                afternoon: "Afternoon – Practical Sessions",
-                afternoonPI: "Afternoon – Practical and Interactive Sessions",
-                afternoonPC: "Afternoon – Practical Sessions and Closing",
-                d1m1: "Opening and welcome – Claudio Tinoco Mesquita (10 min)",
-                d1m2: "Lecture: Principles of PET/CT in Cardiology and Oncology – Christiane Wiefels (45 min)",
-                d1m3: "Lecture: PET/CT in the Diagnostic and Prognostic Evaluation of Cardiovascular and Oncological Diseases (45 min)",
-                d1m4: "Case presentation: Oncology PET-CT – Jessica Cisotto (15 min)",
+                morning: "Morning – Theoretical Sessions (10am - 12pm)",
+                afternoon: "Afternoon – Practical Sessions (2pm - 4pm)",
+                afternoonPI: "Afternoon – Practical and Interactive Sessions (2pm - 4pm)",
+                afternoonPC: "Afternoon – Practical Sessions and Closing (2pm - 4pm)",
+                d1m1: "Opening and welcome – Claudio Tinoco Mesquita",
+                d1m2: "Lecture: Principles of PET/CT in Cardiology and Oncology – Christiane Wiefels",
+                d1m3: "Lecture: PET/CT in the Diagnostic and Prognostic Evaluation of Cardiovascular and Oncological Diseases",
+                d1m4: "Case presentation: Oncology PET-CT – Jessica Cisotto",
                 d1a1: "Practical session: Adjusting PET/CT protocols in cardiology and oncology",
                 d1a2: "Interactive case discussion: Integration of PET/CT in routine clinical practice",
-                d2m1: "Lecture: PET/CT in Breast and Esophageal Cancer – Christiane Wiefels (45 min)",
-                d2m2: "Lecture: MUGA and PET Applications in Cardio-Oncology – Christiane Wiefels (45 min)",
+                d2m1: "Lecture: PET/CT in Breast and Esophageal Cancer – Christiane Wiefels",
+                d2m2: "Lecture: MUGA and PET Applications in Cardio-Oncology – Christiane Wiefels",
                 d2a1: "Case review: Detection of cardiotoxicity in oncological patients (breast, esophagus, lymphoma)",
                 d2a2: "Practical session: Standardization of PET/CT protocols in oncology",
                 d3m1: "Lecture: PET/CT in Lung Cancer: Diagnostic and Prognostic Perspectives",
@@ -472,7 +495,11 @@
         // Function to update the theme toggle icon
         function updateThemeIcon(isDark) {
             themeToggleIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
-            lucide.createIcons();
+            try {
+                lucide.createIcons();
+            } catch (error) {
+                console.error("Error updating theme icon:", error);
+            }
         }
 
         // Tab functionality
@@ -513,30 +540,36 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
-            // Set initial theme
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                htmlEl.classList.add('dark');
-                updateThemeIcon(true);
-            } else {
-                updateThemeIcon(false);
-            }
-            
-            // Set initial language and styles
-            switchLanguage('pt'); 
-            
-            lucide.createIcons();
-            
-            // Add styling classes to tab buttons
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.add('px-4', 'py-2', 'font-semibold', 'text-gray-600', 'dark:text-gray-300', 'rounded-md', 'border-b-2', 'border-transparent', 'hover:bg-blue-50', 'dark:hover:bg-gray-700', 'hover:text-blue-600', 'transition-all', 'duration-200');
-            });
+            try {
+                // CORREÇÃO: Define o tema escuro como padrão, a menos que 'light' esteja salvo
+                const savedTheme = localStorage.getItem('theme');
+                const isDarkMode = savedTheme !== 'light';
 
-             // Add styling classes to lang buttons
-            [langPtBtn, langEnBtn].forEach(btn => {
-                btn.classList.add('px-2', 'py-1', 'border-b-2', 'transition-colors');
-            });
+                if (isDarkMode) {
+                    htmlEl.classList.add('dark');
+                }
+                
+                // Define o ícone do tema antes da renderização inicial
+                themeToggleIcon.setAttribute('data-lucide', isDarkMode ? 'sun' : 'moon');
+                
+                // Define o idioma e os estilos iniciais
+                switchLanguage('pt'); 
+                
+                // Cria todos os ícones quando o DOM estiver pronto
+                lucide.createIcons();
+                
+                // Adiciona classes de estilo aos botões de aba
+                document.querySelectorAll('.tab-button').forEach(button => {
+                    button.classList.add('px-4', 'py-2', 'font-semibold', 'text-gray-600', 'dark:text-gray-300', 'rounded-md', 'border-b-2', 'border-transparent', 'hover:bg-blue-50', 'dark:hover:bg-gray-700', 'hover:text-blue-600', 'transition-all', 'duration-200');
+                });
+
+                 // Adiciona classes de estilo aos botões de idioma
+                 [langPtBtn, langEnBtn].forEach(btn => {
+                    btn.classList.add('px-2', 'py-1', 'border-b-2', 'transition-colors');
+                 });
+            } catch (error) {
+                console.error("Error during page initialization:", error);
+            }
         });
     </script>
 </body>
