@@ -54,6 +54,7 @@
             </div>
               <!-- Navigation Links -->
             <div class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                <a href="#location" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navLocal">Local</a>
                 <a href="#organization" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navOrg">Organização</a>
                 <a href="#objectives" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navObj">Objetivos</a>
                 <a href="#program" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navProg">Programação</a>
@@ -102,27 +103,56 @@
             </div>
         </section>
 
+        <!-- Location Section -->
+        <section id="location" class="py-16 bg-white dark:bg-gray-700">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="locationTitle">Local do Evento</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-blue-400" data-lang-key="locationName">Hospital Universitário Antônio Pedro</h3>
+                        <p class="mt-4 text-lg text-gray-700 dark:text-gray-300" data-lang-key="locationAddress1">Prédio Anexo, 4° Andar, Sala 415b</p>
+                        <p class="mt-1 text-gray-500 dark:text-gray-400" data-lang-key="locationAddress2">Niterói, Rio de Janeiro, Brasil</p>
+                    </div>
+                    <div>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.248356199453!2d-43.12480168503436!3d-22.90424568501314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9983e8b0b5c17b%3A0x4a9382b6f54c25d!2sHospital%20Universit%C3%A1rio%20Ant%C3%B4nio%20Pedro!5e0!3m2!1spt-BR!2sbr!4v1694974000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="350" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg shadow-xl">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Organizers Section -->
-        <section id="organization" class="py-16 bg-white dark:bg-gray-700">
+        <section id="organization" class="py-16 bg-gray-50 dark:bg-gray-900">
             <div class="container mx-auto px-6">
                  <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="orgTitle">Organização e Coordenação</h2>
                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                     <div class="bg-gray-50 dark:bg-gray-600 p-6 rounded-lg shadow-sm">
+                     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                          <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="coordTitle">Coordenadora</h3>
                          <p class="mt-2 text-gray-700 dark:text-gray-300">Prof. Christiane Wiefels</p>
+                         <p class="text-sm text-gray-500 dark:text-gray-400" data-lang-key="wiefelsDesc">(Professora da Universidade de Ottawa)</p>
                      </div>
-                     <div class="bg-gray-50 dark:bg-gray-600 p-6 rounded-lg shadow-sm">
+                     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                          <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="collabTitle">Colaboração</h3>
                          <p class="mt-2 text-gray-700 dark:text-gray-300">Dr. Jessica Cisotto Machado</p>
-                         <p class="text-sm text-gray-500 dark:text-gray-400">(Doutoranda, UFF)</p>
+                         <p class="text-sm text-gray-500 dark:text-gray-400" data-lang-key="cisottoDesc">(Mestranda, UFF)</p>
                      </div>
-                     <div class="bg-gray-50 dark:bg-gray-600 p-6 rounded-lg shadow-sm">
+                     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                          <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="localOrgTitle">Organização Local</h3>
                          <p class="mt-2 text-gray-700 dark:text-gray-300">Prof. Claudio Tinoco Mesquita</p>
+                         <p class="text-sm text-gray-500 dark:text-gray-400" data-lang-key="tinocoDesc">(Professor da UFF)</p>
                      </div>
-                      <div class="bg-gray-50 dark:bg-gray-600 p-6 rounded-lg shadow-sm">
+                      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                          <h3 class="font-bold text-lg text-blue-600 dark:text-blue-400" data-lang-key="residentTitle">Residente</h3>
                          <p class="mt-2 text-gray-700 dark:text-gray-300">Emanuela Bandeira</p>
+                         <p class="text-sm text-gray-500 dark:text-gray-400" data-lang-key="bandeiraDesc">(Residente em Medicina Nuclear da UFF)</p>
                      </div>
                  </div>
             </div>
@@ -130,7 +160,7 @@
 
 
         <!-- Objectives Section -->
-        <section id="objectives" class="py-16 bg-gray-50 dark:bg-gray-900">
+        <section id="objectives" class="py-16 bg-white dark:bg-gray-700">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="objectivesTitle">Objetivos do Curso</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -184,7 +214,7 @@
         </section>
 
         <!-- Program Section -->
-        <section id="program" class="py-16 bg-white dark:bg-gray-800">
+        <section id="program" class="py-16 bg-gray-50 dark:bg-gray-900">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="programTitle">Programação</h2>
                 
@@ -294,21 +324,21 @@
         </section>
 
         <!-- Highlights Section -->
-        <section id="highlights" class="py-16 bg-gray-50 dark:bg-gray-900">
+        <section id="highlights" class="py-16 bg-white dark:bg-gray-700">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="highlightsTitle">Destaques</h2>
                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                         <i data-lucide="sunrise" class="mx-auto text-blue-600 dark:text-blue-400 h-10 w-10 mb-4"></i>
                         <h3 class="font-semibold text-lg" data-lang-key="hl1Title">Aprendizagem Progressiva</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-400" data-lang-key="hl1Desc">Teoria pela manhã e prática à tarde, otimizando o aprendizado.</p>
                     </div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                         <i data-lucide="heart-pulse" class="mx-auto text-blue-600 dark:text-blue-400 h-10 w-10 mb-4"></i>
                         <h3 class="font-semibold text-lg" data-lang-key="hl2Title">Foco Aplicado</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-400" data-lang-key="hl2Desc">Ênfase em PET/CT aplicado à cardiologia e oncologia.</p>
                     </div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
                         <i data-lucide="users" class="mx-auto text-blue-600 dark:text-blue-400 h-10 w-10 mb-4"></i>
                         <h3 class="font-semibold text-lg" data-lang-key="hl3Title">Participação Ativa</h3>
                         <p class="mt-2 text-gray-600 dark:text-gray-400" data-lang-key="hl3Desc">Participação de residentes, fellows e médicos regionais.</p>
@@ -342,6 +372,7 @@
             pt: {
                 pageTitle: "Treinamento Intensivo em PET/CT para Cardiologia e Oncologia",
                 headerTitle: "Treinamento PET/CT",
+                navLocal: "Local",
                 navOrg: "Organização",
                 navObj: "Objetivos",
                 navProg: "Programação",
@@ -351,11 +382,19 @@
                 heroSubtitle: "Projeto de Cooperação Técnica da AIEA: RLA6093 (ARCAL CXCIII)",
                 eventDates: "14 a 17 de Outubro de 2025",
                 supportersTitle: "Com o Apoio de",
+                locationTitle: "Local do Evento",
+                locationName: "Hospital Universitário Antônio Pedro",
+                locationAddress1: "Prédio Anexo, 4° Andar, Sala 415b",
+                locationAddress2: "Niterói, Rio de Janeiro, Brasil",
                 orgTitle: "Organização e Coordenação",
                 coordTitle: "Coordenadora",
                 collabTitle: "Colaboração",
                 localOrgTitle: "Organização Local",
                 residentTitle: "Residente",
+                wiefelsDesc: "(Professora da Universidade de Ottawa)",
+                cisottoDesc: "(Mestranda, UFF)",
+                tinocoDesc: "(Professor da UFF)",
+                bandeiraDesc: "(Residente em Medicina Nuclear da UFF)",
                 objectivesTitle: "Objetivos do Curso",
                 obj1Title: "Treinamento Especializado",
                 obj1Desc: "Capacitar residentes e especialistas em Medicina Nuclear no uso do PET/CT para cardiologia e oncologia.",
@@ -412,6 +451,7 @@
             en: {
                 pageTitle: "Intensive Training in PET/CT for Cardiology and Oncology",
                 headerTitle: "PET/CT Training",
+                navLocal: "Location",
                 navOrg: "Organization",
                 navObj: "Objectives",
                 navProg: "Program",
@@ -421,11 +461,19 @@
                 heroSubtitle: "IAEA Technical Cooperation Project: RLA6093 (ARCAL CXCIII)",
                 eventDates: "October 14–17, 2025",
                 supportersTitle: "With the Support of",
+                locationTitle: "Event Location",
+                locationName: "Antônio Pedro University Hospital",
+                locationAddress1: "Annex Building, 4th Floor, Room 415b",
+                locationAddress2: "Niterói, Rio de Janeiro, Brazil",
                 orgTitle: "Organization and Coordination",
                 coordTitle: "Coordinator",
                 collabTitle: "Collaboration",
                 localOrgTitle: "Local Organization",
                 residentTitle: "Resident",
+                wiefelsDesc: "(Professor, University of Ottawa)",
+                cisottoDesc: "(Master's Student, UFF)",
+                tinocoDesc: "(Professor, UFF)",
+                bandeiraDesc: "(Nuclear Medicine Resident, UFF)",
                 objectivesTitle: "Course Objectives",
                 obj1Title: "Specialized Training",
                 obj1Desc: "Train residents and specialists in Nuclear Medicine in the use of PET/CT for cardiology and oncology.",
