@@ -2,7 +2,7 @@
 <html lang="pt-BR" class="">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title data-lang-key="pageTitle">Treinamento Intensivo em PET/CT para Cardiologia e Oncologia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +59,7 @@
                 <a href="#objectives" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navObj">Objetivos</a>
                 <a href="#program" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navProg">Programação</a>
                 <a href="#highlights" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navHighlights">Destaques</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors" data-lang-key="navContact">Contato</a>
             </div>
             <div class="flex items-center space-x-4">
                 <div class="text-center">
@@ -483,6 +484,28 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="contactTitle">Contato</h2>
+                <div class="max-w-2xl mx-auto">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-300" data-lang-key="contactSubjectLabel">Assunto</label>
+                            <input type="text" id="subject" name="subject" required class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300" data-lang-key="contactMessageLabel">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" data-lang-key="contactSendButton">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
     
     <!-- Footer -->
@@ -504,6 +527,7 @@
                 navObj: "Objetivos",
                 navProg: "Programação",
                 navHighlights: "Destaques",
+                navContact: "Contato",
                 navRegister: "Inscreva-se",
                 heroTitle: "Treinamento Intensivo em PET/CT para Cardiologia e Oncologia",
                 heroSubtitle: "Projeto de Cooperação Técnica da AIEA: RLA6093 (ARCAL CXCIII)",
@@ -595,6 +619,10 @@
                 registerTitle: "Garanta sua Vaga!",
                 registerDesc: "Não perca a oportunidade de aprofundar seus conhecimentos com especialistas renomados da área.",
                 registerButton: "Inscreva-se Agora",
+                contactTitle: "Contato",
+                contactSubjectLabel: "Assunto",
+                contactMessageLabel: "Mensagem",
+                contactSendButton: "Enviar Mensagem",
                 footerText: "© 2025 Treinamento Intensivo em PET/CT. Todos os direitos reservados.",
                 footerSubtext: "Evento em colaboração com AIEA e UFF."
             },
@@ -606,6 +634,7 @@
                 navObj: "Objectives",
                 navProg: "Program",
                 navHighlights: "Highlights",
+                navContact: "Contact",
                 navRegister: "Register",
                 heroTitle: "Intensive Training in PET/CT for Cardiology and Oncology",
                 heroSubtitle: "IAEA Technical Cooperation Project: RLA6093 (ARCAL CXCIII)",
@@ -697,6 +726,10 @@
                 registerTitle: "Secure Your Spot!",
                 registerDesc: "Don't miss the opportunity to deepen your knowledge with renowned experts in the field.",
                 registerButton: "Register Now",
+                contactTitle: "Contact",
+                contactSubjectLabel: "Subject",
+                contactMessageLabel: "Message",
+                contactSendButton: "Send Message",
                 footerText: "© 2025 Intensive Training in PET/CT. All rights reserved.",
                 footerSubtext: "Event in collaboration with IAEA and UFF."
             }
@@ -788,6 +821,20 @@
                  [langPtBtn, langEnBtn].forEach(btn => {
                     btn.classList.add('px-2', 'py-1', 'border-b-2', 'transition-colors');
                  });
+
+                 // Lida com o envio do formulário de contato
+                 const contactForm = document.getElementById('contactForm');
+                 if(contactForm) {
+                    contactForm.addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        const subject = document.getElementById('subject').value;
+                        const message = document.getElementById('message').value;
+                        const email = 'treinamentopethuapuff@outlook.com';
+                        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+                        window.location.href = mailtoLink;
+                    });
+                 }
+
             } catch (error) {
                 console.error("Error during page initialization:", error);
             }
