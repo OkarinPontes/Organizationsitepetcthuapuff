@@ -63,8 +63,7 @@
             </div>
             <div class="flex items-center space-x-4">
                 <div class="text-center">
-                    <a href="https://site-inscricao-petct.vercel.app/" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold py-2 px-4 rounded-full transition-colors text-sm shadow-sm" data-lang-key="navRegister">Inscreva-se</a>
-                    <p class="text-xs text-yellow-600 dark:text-yellow-400 font-semibold mt-1" data-lang-key="freeRegistration">Inscrições Gratuitas</p>
+                    <a href="#" class="bg-red-500 text-white font-bold py-2 px-4 rounded-full text-sm shadow-sm cursor-not-allowed" data-lang-key="navRegister">Inscrições Encerradas</a>
                 </div>
                 <button onclick="toggleDarkMode()" class="p-2 rounded-full text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors">
                     <i id="theme-toggle-icon" data-lucide="moon"></i>
@@ -90,7 +89,9 @@
                     <i data-lucide="calendar-days" class="w-6 h-6"></i>
                     <span class="font-semibold" data-lang-key="eventDates">14 a 17 de Outubro de 2025</span>
                 </div>
-                <p class="mt-4 text-yellow-300 font-bold text-xl tracking-wide" data-lang-key="freeRegistration">Inscrições Gratuitas</p>
+                <div class="mt-6">
+                    <p class="inline-block bg-red-600 text-white font-bold text-xl tracking-wide py-3 px-6 rounded-lg shadow-lg" data-lang-key="registrationsClosed">Inscrições Encerradas</p>
+                </div>
             </div>
         </section>
 
@@ -477,10 +478,9 @@
         <!-- Registration Section -->
         <section id="register" class="py-20 bg-blue-50 dark:bg-gray-800">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4" data-lang-key="registerTitle">Garanta sua Vaga!</h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto" data-lang-key="registerDesc">Não perca a oportunidade de aprofundar seus conhecimentos com especialistas renomados da área.</p>
-                <a href="https://site-inscricao-petct.vercel.app/" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 shadow-lg inline-block" data-lang-key="registerButton">Inscreva-se Agora</a>
-                <p class="mt-4 text-gray-600 dark:text-yellow-300 font-semibold" data-lang-key="freeRegistration">Inscrições Gratuitas</p>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4" data-lang-key="registerTitle">Inscrições Encerradas</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto" data-lang-key="registerDesc">Agradecemos o seu interesse no evento. As inscrições estão encerradas.</p>
+                <a href="#" class="bg-gray-400 text-gray-800 font-bold py-3 px-8 rounded-full text-lg shadow-lg inline-block cursor-not-allowed" data-lang-key="registerButton">Inscrições Encerradas</a>
             </div>
         </section>
 
@@ -528,11 +528,11 @@
                 navProg: "Programação",
                 navHighlights: "Destaques",
                 navContact: "Contato",
-                navRegister: "Inscreva-se",
+                navRegister: "Inscrições Encerradas",
                 heroTitle: "Treinamento Intensivo em PET/CT para Cardiologia e Oncologia",
                 heroSubtitle: "Projeto de Cooperação Técnica da AIEA: RLA6093 (ARCAL CXCIII)",
                 eventDates: "14 a 17 de Outubro de 2025",
-                freeRegistration: "Inscrições Gratuitas",
+                registrationsClosed: "Inscrições Encerradas",
                 supportersTitle: "Com o Apoio de",
                 locationTitle: "Local do Evento",
                 locationName: "Hospital Universitário Antônio Pedro",
@@ -616,9 +616,9 @@
                 hl2Desc: "Ênfase em PET/CT aplicado à cardiologia e oncologia.",
                 hl3Title: "Participação Ativa",
                 hl3Desc: "Participação de residentes, fellows e médicos regionais.",
-                registerTitle: "Garanta sua Vaga!",
-                registerDesc: "Não perca a oportunidade de aprofundar seus conhecimentos com especialistas renomados da área.",
-                registerButton: "Inscreva-se Agora",
+                registerTitle: "Inscrições Encerradas",
+                registerDesc: "Agradecemos o seu interesse no evento. As inscrições estão encerradas.",
+                registerButton: "Inscrições Encerradas",
                 contactTitle: "Contato",
                 contactSubjectLabel: "Assunto",
                 contactMessageLabel: "Mensagem",
@@ -635,11 +635,11 @@
                 navProg: "Program",
                 navHighlights: "Highlights",
                 navContact: "Contact",
-                navRegister: "Register",
+                navRegister: "Registrations Closed",
                 heroTitle: "Intensive Training in PET/CT for Cardiology and Oncology",
                 heroSubtitle: "IAEA Technical Cooperation Project: RLA6093 (ARCAL CXCIII)",
                 eventDates: "October 14–17, 2025",
-                freeRegistration: "Free Registration",
+                registrationsClosed: "Registrations Closed",
                 supportersTitle: "With the Support of",
                 locationTitle: "Event Location",
                 locationName: "Antônio Pedro University Hospital",
@@ -723,9 +723,9 @@
                 hl2Desc: "Emphasis on PET/CT applied to cardiology and oncology.",
                 hl3Title: "Active Participation",
                 hl3Desc: "Active participation of residents, fellows, and regional physicians.",
-                registerTitle: "Secure Your Spot!",
-                registerDesc: "Don't miss the opportunity to deepen your knowledge with renowned experts in the field.",
-                registerButton: "Register Now",
+                registerTitle: "Registrations Closed",
+                registerDesc: "Thank you for your interest in the event. Registrations are now closed.",
+                registerButton: "Registrations Closed",
                 contactTitle: "Contact",
                 contactSubjectLabel: "Subject",
                 contactMessageLabel: "Message",
