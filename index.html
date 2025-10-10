@@ -63,7 +63,7 @@
             </div>
             <div class="flex items-center space-x-4">
                 <div class="text-center">
-                    <a href="#" class="bg-red-500 text-white font-bold py-2 px-4 rounded-full text-sm shadow-sm cursor-not-allowed" data-lang-key="navRegister">Inscrições Encerradas</a>
+                    <a href="#" class="bg-red-500 text-white font-bold py-2 px-4 rounded-full text-sm shadow-sm cursor-not-allowed whitespace-nowrap" data-lang-key="navRegister">Inscrições Encerradas</a>
                 </div>
                 <button onclick="toggleDarkMode()" class="p-2 rounded-full text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors">
                     <i id="theme-toggle-icon" data-lucide="moon"></i>
@@ -344,10 +344,18 @@
                             </div>
                             <!-- Item -->
                             <div class="flex items-start">
-                                <div class="w-28 flex-shrink-0 text-right pr-4"><p class="font-bold text-blue-600 dark:text-blue-400">11:00 - 13:00</p></div>
+                                <div class="w-28 flex-shrink-0 text-right pr-4"><p class="font-bold text-blue-600 dark:text-blue-400">11:00 - 12:00</p></div>
                                 <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-4 flex-grow">
                                     <p class="font-semibold" data-lang-key="d2_item4_title"></p>
                                     <p class="text-sm text-gray-500 dark:text-gray-400" data-lang-key="d2_item4_speaker"></p>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="flex items-start">
+                                <div class="w-28 flex-shrink-0 text-right pr-4"><p class="font-bold text-blue-600 dark:text-blue-400">12:00 - 13:00</p></div>
+                                <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-4 flex-grow">
+                                    <p class="font-semibold" data-lang-key="d2_item5_title"></p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400" data-lang-key="d2_item5_speaker"></p>
                                 </div>
                             </div>
                         </div>
@@ -435,14 +443,6 @@
                                 <div class="w-28 flex-shrink-0 text-right pr-4"><p class="font-bold text-blue-600 dark:text-blue-400">12:00 - 13:00</p></div>
                                 <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-4 flex-grow">
                                     <p class="font-semibold" data-lang-key="d4_item5_title"></p>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400" data-lang-key="d4_item5_speaker"></p>
-                                </div>
-                            </div>
-                            <!-- Item -->
-                           <div class="flex items-start">
-                                <div class="w-28 flex-shrink-0 text-right pr-4"><p class="font-bold text-blue-600 dark:text-blue-400">13:00 - 13:20</p></div>
-                                <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-4 flex-grow">
-                                    <p class="font-semibold" data-lang-key="d4_item6_title"></p>
                                 </div>
                             </div>
                        </div>
@@ -574,22 +574,24 @@
                 d1_item1_speaker: "Claudio Tinoco Mesquita",
                 d1_item2_title: "Palestra: Fundamentos de PET/CT em Cardiologia e Oncologia",
                 d1_item2_speaker: "Christiane Wiefels",
-                d1_item3_title: "Cardio-oncologia – Avaliação Diagnóstica e Prognóstica em PET-CT",
-                d1_item3_speaker: "Claudio Tinoco Mesquita",
+                d1_item3_title: "Palestra: Aplicações de MUGA e PET em Cardio-Oncologia",
+                d1_item3_speaker: "Christiane Wiefels",
                 d1_item4_title: "Apresentação de caso: PET-CT Oncológico",
                 d1_item4_speaker: "Jessica Cisotto",
                 d1_item5_title: "Intervalo",
                 d1_item6_title: "Incidentaloma em PET",
                 d1_item6_speaker: "Christiane Wiefels",
-                d1_item7_title: "Palestra: Aplicações de MUGA e PET em Cardio-Oncologia",
+                d1_item7_title: "Fortalecimento do Programa de Fellow em Medicina Nuclear e Cardiologia Nuclear com Perspectivas Locais e Regionais",
                 d1_item7_speaker: "Christiane Wiefels",
-                d2_item1_title: "Palestra: PET/CT em Câncer de Pulmão: Como laudar um estudo PET e estadiamento TNM",
-                d2_item1_speaker: "Christiane Wiefels",
-                d2_item2_title: "Palestra: PET/CT em Pericardite e Miocardite",
+                d2_item1_title: "Palestra: PET/CT em Pericardite e Miocardite",
+                d2_item1_speaker: "Claudio Tinoco Mesquita",
+                d2_item2_title: "Cardio-oncologia – Avaliação Diagnóstica e Prognóstica em PET-CT",
                 d2_item2_speaker: "Claudio Tinoco Mesquita",
                 d2_item3_title: "Intervalo",
-                d2_item4_title: "Casos reais – aplicação de PET/CT",
+                d2_item4_title: "Palestra: PET/CT em Câncer de Pulmão: Como laudar um estudo PET e estadiamento TNM",
                 d2_item4_speaker: "Christiane Wiefels",
+                d2_item5_title: "Casos reais – aplicação de PET/CT",
+                d2_item5_speaker: "Christiane Wiefels",
                 d3_item1_title: "Palestra: Câncer de Esôfago em PET/CT",
                 d3_item1_speaker: "Christiane Wiefels",
                 d3_item2_title: "PET/CT em Melanoma",
@@ -606,9 +608,7 @@
                 d4_item3_title: "Intervalo",
                 d4_item4_title: "Revisão de caso complexo: Integração de PET/CT em Cardiologia e Oncologia",
                 d4_item4_speaker: "Christiane Wiefels",
-                d4_item5_title: "Sessão final: Fortalecimento do Programa de Fellow em Medicina Nuclear e Cardiologia Nuclear com Perspectivas Locais e Regionais",
-                d4_item5_speaker: "Christiane Wiefels",
-                d4_item6_title: "Considerações finais e entrega de certificados",
+                d4_item5_title: "Considerações finais e entrega de certificados",
                 highlightsTitle: "Destaques",
                 hl1Title: "Aprendizagem Progressiva",
                 hl1Desc: "Teoria pela manhã e prática à tarde, otimizando o aprendizado.",
@@ -681,22 +681,24 @@
                 d1_item1_speaker: "Claudio Tinoco Mesquita",
                 d1_item2_title: "Lecture: Basics of PET/CT in Cardiology and Oncology",
                 d1_item2_speaker: "Christiane Wiefels",
-                d1_item3_title: "Cardio oncology – Diagnostic and Prognostic Evaluation in PET-CT",
-                d1_item3_speaker: "Claudio Tinoco Mesquita",
+                d1_item3_title: "Lecture: MUGA and PET Applications in Cardio-Oncology",
+                d1_item3_speaker: "Christiane Wiefels",
                 d1_item4_title: "Case presentation: Oncology PET-CT",
                 d1_item4_speaker: "Jessica Cisotto",
                 d1_item5_title: "Interval",
                 d1_item6_title: "Incidentaloma on PET",
                 d1_item6_speaker: "Christiane Wiefels",
-                d1_item7_title: "Lecture: MUGA and PET Applications in Cardio-Oncology",
+                d1_item7_title: "Strengthening the Fellow Program in Nuclear Medicine and Nuclear Cardiology with Local and Regional Perspectives",
                 d1_item7_speaker: "Christiane Wiefels",
-                d2_item1_title: "Lecture: PET/CT in Lung Cancer: How to report a PET study and TNM staging",
-                d2_item1_speaker: "Christiane Wiefels",
-                d2_item2_title: "Lecture: PET/CT in Pericarditis and Myocarditis",
+                d2_item1_title: "Lecture: PET/CT in Pericarditis and Myocarditis",
+                d2_item1_speaker: "Claudio Tinoco Mesquita",
+                d2_item2_title: "Cardio oncology – Diagnostic and Prognostic Evaluation in PET-CT",
                 d2_item2_speaker: "Claudio Tinoco Mesquita",
                 d2_item3_title: "Interval",
-                d2_item4_title: "Real cases – application of PET/CT",
+                d2_item4_title: "Lecture: PET/CT in Lung Cancer: How to report a PET study and TNM staging",
                 d2_item4_speaker: "Christiane Wiefels",
+                d2_item5_title: "Real cases – application of PET/CT",
+                d2_item5_speaker: "Christiane Wiefels",
                 d3_item1_title: "Lecture: PET/CT Esophageal Cancer",
                 d3_item1_speaker: "Christiane Wiefels",
                 d3_item2_title: "PET/CT in Melanoma",
@@ -713,9 +715,7 @@
                 d4_item3_title: "Interval",
                 d4_item4_title: "Complex case review: Integration of PET/CT in Cardiology and Oncology",
                 d4_item4_speaker: "Christiane Wiefels",
-                d4_item5_title: "Final session: Strengthening the Fellow Program in Nuclear Medicine and Nuclear Cardiology with Local and Regional Perspectives",
-                d4_item5_speaker: "Christiane Wiefels",
-                d4_item6_title: "Closing remarks and certificate presentation",
+                d4_item5_title: "Closing remarks and certificate presentation",
                 highlightsTitle: "Highlights",
                 hl1Title: "Progressive Learning",
                 hl1Desc: "Theory in the morning and practice in the afternoon, optimizing progressive learning.",
